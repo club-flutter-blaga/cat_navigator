@@ -17,7 +17,10 @@ class _HomePageState extends State<HomePage> {
         children: [
           for (final cat in cats)
             ListTile(
-              title: Text(cat.name),
+              title: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(cat.name),
+              ),
               leading: Image.network(cat.imageUrl),
               onTap: () {
                 //TODO navigheaza la pagina CatPage() pasand ca argument obiectul cat.
