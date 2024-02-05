@@ -1,4 +1,5 @@
 import 'package:cat_navigator/data/cats.dart';
+import 'package:cat_navigator/pages/cat_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,7 +24,11 @@ class _HomePageState extends State<HomePage> {
               ),
               leading: Image.network(cat.imageUrl),
               onTap: () {
-                //TODO navigheaza la pagina CatPage() pasand ca argument obiectul cat.
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => CatPage(cat: cat),
+                  ),
+                );
               },
             )
         ],

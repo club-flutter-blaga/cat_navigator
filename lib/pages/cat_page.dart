@@ -18,7 +18,11 @@ class _CatPageState extends State<CatPage> {
         padding: const EdgeInsets.all(16),
         child: ListView(
           children: [
-            Image.network(widget.cat.imageUrl),
+            Image.network(
+              widget.cat.imageUrl,
+              width: 500,
+              height: 500,
+            ),
             Text(
               widget.cat.name,
               style: const TextStyle(
@@ -29,14 +33,13 @@ class _CatPageState extends State<CatPage> {
             Text(
               widget.cat.description,
               style: const TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
+                fontSize: 16,
               ),
             ),
             const Spacer(),
             ElevatedButton(
               onPressed: () {
-                //TODO: go back to the previous page.
+                Navigator.of(context).pop();
               },
               child: Text('Back'),
             ),
