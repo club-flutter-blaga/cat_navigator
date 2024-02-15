@@ -39,7 +39,7 @@ class _CatPageState extends State<CatPage> {
             const Spacer(),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                //TODO introdu codul de intoarcere
               },
               child: Text('Back'),
             ),
